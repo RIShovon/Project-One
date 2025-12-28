@@ -1,0 +1,806 @@
+/* Global Class Start */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.section-heading h2{
+    font-weight: 700;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+/* Global Class End */
+
+/* Top Header part START */
+header{
+    position: sticky;
+    top: -37px;
+    background-color: white;
+    z-index: 99999999999;
+}
+header .top-header {
+    background-color: #173a69;
+    padding: 8px 0;
+}
+header .top-header .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+header .container .left-side a {
+    color: white;
+    text-decoration: none; /*  used for removing underline  */
+    margin-right: 47px; /* if i want to work with specific ancore tag from here??? */
+}
+header .container .left-side a i {
+    margin-right: 8px;
+}
+header .container .right-side {
+    text-align: right;
+}
+header .container .right-side a {
+    color: white;
+}
+header .container .right-side a:nth-child(2) {
+    margin: 0 30px;
+}
+/* Top Header part END */
+
+/* Top Navigation part START */
+header nav .container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 14px 0;
+}
+header nav .container .logo-column{
+    width: 30%;
+}
+
+.mobile-menu{
+    display: none;
+}
+.mobile-menu i{
+    font-size: 20px;
+    color: #173a69;
+}
+
+header nav .container .menu-column{
+    width: 70%;
+    align-content: center;
+    text-align: right;
+}
+header nav .container .menu-column ul{
+    list-style-type: none;
+}
+header nav .container .menu-column ul li{
+    display: inline-block;
+}
+header nav .container .menu-column ul li a{
+    text-decoration: none;
+    color: #0c1f38;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 43px 37.5px;
+    position: relative;
+    transition: .5s;
+}
+header nav .container .menu-column ul li:last-child a{
+    padding-right: 0;
+}
+header nav .container .menu-column ul li a::after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 0;
+    background-color: #0c1f38;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4px;
+    transition: .5s;
+}
+header nav .container .menu-column ul li a:hover::after{
+    width: 100%;
+}
+header nav .container .menu-column ul li{
+    position: relative;
+}
+.active-menu::after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #0c1f38;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -47px;
+    transition: .5s;
+}
+header nav .container .menu-column ul li a:hover{
+    background-color: #fbfbfb;
+    
+}
+/* Top Navigation part END */
+
+/* Home-Slider Part Start */
+.home-slider{
+    padding-top: 5px;
+}
+
+/* Slide one  */
+.home-slider .slide-one{
+    min-height: 600px;
+    background-image: url('Images/Slider\ one\ bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+}
+.home-slider .slide-one .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 300px;
+}
+.home-slider .slide-one .container .right h3{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.home-slider .slide-one .container .right h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.home-slider .slide-one .container .right p{
+    margin-top: 20px;
+    margin-bottom: 28px;
+} 
+/* Slide one End */
+/* Slide Two */
+.home-slider .slide-two{
+    min-height: 600px;
+    background-image: url('Images/Slide\ two\ bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+} 
+
+.home-slider .slide-two .container .right h3{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+}
+.home-slider .slide-two .container .right h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+}
+.home-slider .slide-two .container .right p{
+    margin-top: 20px;
+    margin-bottom: 28px;
+    color: white;
+} 
+/* Slide two End */
+/* Slide three */
+.home-slider .slide-three{
+    min-height: 600px;
+    background-image: url('Images/Slider\ three\ bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+} 
+.home-slider .slide-three .container{
+    margin-left: 40%;
+}
+.home-slider .slide-three .container .right h3{
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+}
+.home-slider .slide-three .container .right h1{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+}
+.home-slider .slide-three .container .right p{
+    margin-top: 20px;
+    margin-bottom: 28px;
+    color: white;
+} 
+/* Slide three End */
+
+.btn-group a{
+    background-color: #173a69;
+    padding: 13px 28px;
+    border: 2px solid #173a69;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    transition: .4s;
+}
+.btn-group a:hover{
+    background-color: transparent;
+    color: #173a69;
+}
+.btn-group a:last-child{
+    background-color: transparent;
+    color: #173a69;
+    margin-left: 6px;
+}
+.btn-group a:last-child:hover{
+    background-color: #173a69;
+    color: white;
+}
+
+/* Navigation Dots of Slider */
+
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 20px !important;
+    height: 20px !important;
+    background: transparent !important;
+    border: 2px solid #173a69 !important;
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: -30px !important;
+    margin-left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #173a69 !important;
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: -36px !important;
+    z-index: 999999 !important;
+    position: absolute !important;
+}
+ 
+/* Home-Slider Part End */
+
+/* Services Part Start */
+.services-section{
+    padding: 90px 0 135px 0;
+} 
+.services-section .section-heading{
+    text-align: center;
+}
+.services-section .section-heading h2{
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+.services-section .section-heading h2::after{
+    content: '';
+    position: absolute;
+    background-image: url(Images/services-icon.png);
+    height: 30px;
+    width: 228px;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px;
+}
+.services-section .services-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 122px;
+
+}
+.services-section .services-box .box{
+    text-align: center;
+}
+.services-section .services-box .box p{
+    font-size: 17px;
+    margin-top: 30px;
+}
+/* Services Part End */
+
+/* About Part Start */
+.about-section{
+    padding: 85px 0 78px 0;
+    background-image: url(Images/about-bg.png);
+}
+.about-section .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.about-section .container .section-heading img{
+    margin-top: 38px;
+    margin-bottom: 23px;
+}
+.about-section .container .right{
+    align-content: center;
+}
+.about-section .container .right p{
+    font-size: 15px;
+    font-weight: 200;
+}
+.about-section .container .right .first-p{
+    margin-bottom: 30px;
+}
+/* About Part End */
+
+/* Gallary Part Start */
+.gallary-section{
+    padding: 95px 0;
+    text-align: center;
+}
+.gallary-section .container{
+    text-align: center;
+}
+.gallary-section .container .section-heading h2{
+    position: relative;
+}
+.gallary-section .container .section-heading h2::after{
+    content: '';
+    position: absolute;
+    background-image: url(Images/services-icon.png);
+    height: 30px;
+    width: 228px;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120px;
+    margin: 30px 0 60px 0;
+}
+.gallary-section .container .gallary{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 120px;
+    gap: 30px; /* for gap all seide */
+}
+.gallary-section .container .gallary .item img{
+    width: 100%;
+}
+.gallary-section .container .gallary .item{
+    position: relative;
+}
+.gallary-section .container .gallary .item::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #302e2d93;
+    opacity: 0;
+    left: 0;
+    top: 0;
+}
+.gallary-section .container .gallary .item:hover::after{
+    opacity: 1;
+}
+.gallary-section .container .gallary .item .caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    opacity: 0;
+    z-index: 1;
+    transition: .4s;
+}
+.gallary-section .container .gallary .item .caption h4{
+    font-size: 26px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.gallary-section .container .gallary .item .caption p{
+    font-size: 17px;
+    font-style: italic;
+}
+.gallary-section .container .gallary .item .caption i{
+    border: 2px solid white;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    align-content: center;
+    font-size: 30px;
+}
+.gallary-section .container .gallary .item:hover .caption{
+    opacity: 1;
+}
+.gallary-section .container a{
+    margin-top: 40px;
+    padding: 17px 28px;
+    background-color: #173a69;
+    text-decoration: none;
+    border: 2px solid #173a69;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    transition: .4s ease;
+}
+.gallary-section .container a:hover{
+    background-color: transparent;
+    color: #173a69;
+}
+/* Gallary Part End */
+
+
+/* Footer Part Start */
+/* Footer Quick_contact */
+footer .quick-contact{
+    background-color: #173a69;
+    padding: 80px 0;
+}
+footer .quick-contact .container{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+footer .quick-contact .container p a{
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer Content */
+footer .footer-content .container{
+    text-align: center;
+    padding: 65px 0;
+}
+footer .footer-content .container .icon-group{
+    margin-top: 35px;
+}
+footer .footer-content .container .icon-group i{
+    color: #7f7f7f;
+    border: 2px solid #7f7f7f;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    align-content: center;
+}
+footer .footer-content .container .icon-group i:hover{
+    background-color: #173a69;
+    color: white;
+}
+footer .footer-content .container .icon-group a:nth-child(2) i{
+    margin: 0 28px;
+}
+
+/* footer Soket */
+footer .socket{
+    background-color: black;
+    padding: 30px 0;
+}
+footer .socket .container{
+    text-align: center;
+}
+footer .socket .container p{
+    color: white;
+    font-size: 15px;
+}
+footer .socket .container p a{
+    font-weight: 700;
+    color: white;
+}
+/* Footer Part End */
+/* Home Page Part END */
+
+
+
+/* Design For Services Page */
+/* Inner Banner Part Start */
+.inner-banner{
+    background-image: url(Images/ServicesPage/InnerBannerBG.jpg);
+    min-height: 255px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover/*100%*/;
+    align-content: center; /*for hight*/
+    margin-top: 5px;
+}
+.inner-banner .container{
+    text-align: center;
+}
+.inner-banner .container h1{
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+}
+.inner-banner .container p{
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.inner-banner .container p a{
+    text-decoration: none;
+    color: white;
+}
+/* Inner Banner Part End */
+
+/* Post/Blog Part Start  */
+.blog{
+    padding: 120px 0;
+    background-color: #f8f8f8;
+}
+.blog .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 45px;
+}
+.blog .container .post img{
+    width: 100%;
+}
+.blog .container .post h2{
+    font-size: 22px;
+    font-weight: 600;
+    color: #173a69;
+    line-height: 22px;
+    margin: 25px 0;
+}
+.blog .container .post p{
+    font-size: 15px;
+    color: #0f0f0f;
+    line-height: 25px;
+}
+/* Post/Blog Part End */
+/* Design for Services Page End */
+
+
+
+/* Design for About Us Page Start */
+.section-heading a{
+    text-decoration: none;
+    color: #173a69;
+}
+.about-services{
+    padding: 80px 0;
+    background-image: url(Images/AboutPage/aboutbg.jpg);
+}
+.about-services .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+.about-services .container .services-box{
+    text-align: center;
+    background-color: white;
+    padding: 25px;
+}
+.about-services .container .services-box h3{
+    color: #173a69;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.about-services .container .services-box p{
+    color: #090909;
+    font-size: 15px;
+    margin-top: 12px;
+    font-weight: 100;
+}
+.about-services .container .services-box p a{
+    color: #173a69;
+    font-weight: 600;
+    text-decoration: none;
+}
+.about-maintenance{
+    text-align: center;
+}
+.about-maintenance .container .upper-part h3{
+    font-size: 21px;
+    font-weight: 700;
+    color: #000000;
+    padding-top: 45px;
+    padding-bottom: 43px;
+}
+.about-maintenance .container .upper-part h3 a{
+    color: #173a69;
+    text-decoration: none;
+}
+.about-maintenance .bg{
+    background-image: url(Images/AboutPage/about-box-groupBG.jpg);
+    height: 472px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+}
+.about-maintenance .bg .container .boxgroup{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 83px;
+    gap: 33px;
+}
+.about-maintenance .bg .container .boxgroup .box h3{
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 700;
+    color: #173a69;
+    padding-top: 38px;
+    padding-bottom: 18px;
+}
+.about-maintenance .bg .container .boxgroup .box p{
+    font-size: 15px;
+    font-weight: 100;
+    color: #494949;
+}
+/* Design For About Page End */
+
+
+
+/* Design For Gallary page Start */
+.gallary-page .container{
+    text-align: center;
+}
+.gallary-page .container .section-heading h2{
+    position: relative;
+}
+.gallary-page .container .section-heading h2::after{
+    content: '';
+    position: absolute;
+    background-image: url(Images/services-icon.png);
+    height: 30px;
+    width: 228px;
+    background-repeat: no-repeat;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120px;
+    margin: 30px 0 60px 0;
+}
+.gallary-page .container .gallary{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 87px;
+    margin-bottom: 110px;
+    gap: 30px; /* for gap all seide */
+}
+.gallary-page .container .gallary .item img{
+    width: 100%;
+}
+.gallary-page .container .gallary .item{
+    position: relative;
+}
+.gallary-page .container .gallary .item::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #302e2d93;
+    opacity: 0;
+    left: 0;
+    top: 0;
+}
+.gallary-page .container .gallary .item:hover::after{
+    opacity: 1;
+}
+.gallary-page .container .gallary .item .caption{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    opacity: 0;
+    z-index: 1;
+    transition: .4s;
+}
+.gallary-page .container .gallary .item .caption h4{
+    font-size: 26px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+.gallary-page .container .gallary .item .caption p{
+    font-size: 17px;
+    font-style: italic;
+}
+.gallary-page .container .gallary .item .caption i{
+    border: 2px solid white;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    align-content: center;
+    font-size: 30px;
+}
+.gallary-page .container .gallary .item:hover .caption{
+    opacity: 1;
+}
+/* Design For Gallary Page End */
+
+
+
+/* Design for Contact Us Page Start */
+.contact-section{
+    padding: 90px 0;
+}
+.contact-section .container .contact-form{
+    width: 800px;
+}
+.contact-section .container .contact-form h2{
+    font-size: 25px;
+    font-weight: 700;
+    color: #0c0603;
+}
+.contact-section .container .contact-form p{
+    font-size: 16px;
+    font-weight: 100;
+    color: #0c0603;
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+.contact-section .container .contact-info{
+    width: 340px;
+    padding-left: 54px;
+}
+.contact-section .container .contact-info h3{
+    font-size: 25px;
+    font-weight: 700;
+    color: #0c0603;
+    margin-bottom: 31px;
+}
+.contact-section .container .contact-info p{
+    margin: 12.5px 0;
+    font-size: 16px;
+    font-weight: 100;
+    color: #0c0603;
+}
+.contact-section .container .contact-info p strong{
+    color: #173a69;
+    font-weight: bold;
+}
+.contact-section .container .contact-info p img{
+    margin-right: 13px;
+    text-align: center;
+}
+.contact-section .container .contact-info p a{
+    text-decoration: none;
+    color: #0c0603;
+}
+.contact-section .container{
+    display: flex;
+    flex-wrap: '';
+}/*flex is used while Width is fixed*/
+.contact-section .container .contact-form form input{
+    width: 100%;
+    padding: 12px;
+}
+.contact-section .container .contact-form form  textarea{
+    width: 100%;
+    padding: 12px;
+    height: 150px;
+    resize: none;
+}
+.contact-section .container .contact-form form .group1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+.contact-section .container .contact-form form .group2{
+    margin: 25px 0;
+}
+button[type=submit]{
+    background-color: #173a69;
+    color: white;
+    border: 2px solid #173a69;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 25px;
+}
+button[type=submit]:hover{
+    background-color: transparent;
+    color: #173a69;
+    border-color: #173a69;
+}
+/* Design For Contact Us page End */
+
